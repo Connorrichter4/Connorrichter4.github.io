@@ -1,0 +1,12 @@
+body {
+    border: solid green;
+}
+
+main {
+    text-align: justify;
+}
+
+.project-image {
+    max-width: 350px;
+    margin: 0 auto;
+}
