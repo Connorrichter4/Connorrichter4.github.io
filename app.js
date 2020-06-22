@@ -32,13 +32,15 @@ const projects = [
 const projectDiv = document.querySelector('.project');
 
 for (let i = 0; i < projects.length; i++) {
+	const cardCol = document.createElement('div');
+	cardCol.classList.add('col', 'mb-4');
+
 	const card = document.createElement('div');
-	card.classList.add('card', 'text-white', 'bg-dark', 'mb-3');
+	card.classList.add('card', 'text-white', 'bg-dark', 'h-100');
 
 	const image = document.createElement('img');
 	image.src = projects[i].img;
-	image.classList.add('project-image');
-	console.log(image);
+	image.classList.add('project-image', 'card-img-top');
 
 	const cardBody = document.createElement('div');
 	cardBody.classList.add('card-body');
@@ -51,24 +53,30 @@ for (let i = 0; i < projects.length; i++) {
 	tech.innerText = projects[i].tech;
 	tech.classList.add('card-text');
 
+	const cardLinks = document.createElement('div');
+	cardLinks.classList.add('card-body', 'text-center');
+
 	const git = document.createElement('a');
 	git.href = projects[i].git;
-	git.classList.add('btn', 'btn-primary');
+	git.classList.add('card-link');
 	git.innerText = 'GitHub Repo';
 	git.target = '_blank';
 
 	const deploy = document.createElement('a');
 	deploy.href = projects[i].deploy;
-	deploy.classList.add('btn', 'btn-primary');
+	deploy.classList.add('card-link');
 	deploy.innerText = 'Deployed Here';
 	deploy.target = '_blank';
 
+	cardLinks.appendChild(git);
+	cardLinks.appendChild(deploy);
+
 	cardBody.appendChild(title);
 	cardBody.appendChild(tech);
-    cardBody.appendChild(git);
-    cardBody.appendChild(deploy);
+	cardBody.appendChild(cardLinks);
 
 	card.appendChild(image);
 	card.appendChild(cardBody);
-	projectDiv.appendChild(card);
+	cardCol.appendChild(card);
+    projectDiv.appendChild(cardCol);
 }
