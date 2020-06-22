@@ -1,15 +1,8 @@
-/* main {
-    width: 80vw;
-    margin: 0 auto;
-} */
+
 .intro, #about, #projects {
     padding: 2rem;
 }
 
-.intro, #projects {
-    background-color: rgb(198, 198, 198);
-}
-
 #about {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(245, 245, 245);
 }
