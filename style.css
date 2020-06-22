@@ -1,8 +1,17 @@
 
-.intro, #about, #projects {
+.intro, #about, #projects, #resume {
     padding: 2rem;
 }
 
-#about {
+#about, #resume {
     background-color: rgb(245, 245, 245);
+    font-size: 18px;
+}
+
+.highlights {
+    font-size: 22px;
+    padding: 1rem 0;
+}
+.resume-link {
+    margin-top: 1rem;
 }
